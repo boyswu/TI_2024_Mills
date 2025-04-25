@@ -1,8 +1,8 @@
 import time
 
-from connect_comd import connect, receive_feedback
-from opencv_phone import opencv_phone
-from auto_recognize import find_differences
+from src.connect_comd import connect, receive_feedback
+from src.opencv_phone import opencv_phone
+from src.auto_recognize import find_differences
 
 
 def dis_board(board):

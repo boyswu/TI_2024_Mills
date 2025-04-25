@@ -1,6 +1,6 @@
 import cv2
-from ai import tic_tac_toe
-from connect_comd import receive_feedback
+from src.ai import tic_tac_toe
+from src.connect_comd import receive_feedback
 import threading
 
 # 创建锁
