@@ -8,7 +8,6 @@ parity = serial.PARITY_NONE  # 校验位
 stopbits = serial.STOPBITS_ONE  # 停止位
 
 
-
 def connect(control_command):
     # 打开串口
     ser = serial.Serial(port, baudrate, bytesize, parity, stopbits, timeout=1)
@@ -48,4 +47,3 @@ def receive_feedback():
         print("结束监听")
     finally:
         ser.close()  # 关闭串口
-
