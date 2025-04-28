@@ -42,8 +42,8 @@ def find_blue_board(image):
 
 
 def opencv_phone():
-    image = cv2.imread("./assets/2.jpg")
-    photo = cv2.imread("./assets/4.jpg")
+    image = cv2.imread("../assets/bl_full.jpg")
+    photo = cv2.imread("../assets/bl_empty.jpg")
     # 找到蓝色棋盘的轮廓
     box = find_blue_board(photo)
     # # 绘制矩形轮廓
@@ -93,8 +93,8 @@ def opencv_phone():
     mask = cv2.erode(mask, kernel, iterations=5)
     # 找到轮廓
     cv2.imshow('Dilate', mask)  # 显示膨胀运算结果
-    cv2.imwrite("../img.jpg", mask)
-    img = cv2.imread("../img.jpg")
+    cv2.imwrite("../output/img.jpg", mask)
+    img = cv2.imread("../output/img.jpg")
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # 使用二值化方法
     _, threshold = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
