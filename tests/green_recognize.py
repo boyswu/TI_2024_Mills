@@ -9,7 +9,7 @@ import numpy as np
 """
 
 
-def find_blue_board(image):
+def find_green_board(image):
     # 转换到HSV颜色空间
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
     # 定义绿色的HSV范围(自己调)
@@ -56,7 +56,7 @@ def opencv_phone():
         img = image.copy()
         photo = cv2.imread("../assets/gr_empty.jpg")
         # 找到绿色棋盘的轮廓
-        box = find_blue_board(photo)
+        box = find_green_board(photo)
         # 绘制矩形轮廓
         cv2.drawContours(img, [box], 0, (0, 255, 0), 2)
         # 获取棋盘四个顶点
